@@ -19,7 +19,7 @@ interface Mascotas{
      raza:string,
      sexo?:string,
      vacunado:boolean,
-     mostrarEdad()=>void
+     mostrarEdad:()=>void
 }
 
 function mostrarMascota(mascota:Mascotas,x:number):void{
@@ -27,3 +27,14 @@ function mostrarMascota(mascota:Mascotas,x:number):void{
      console.log(mascota);
      console.log(mascota.mostrarEdad())
 }
+
+const nuevaMascota:Mascotas={
+     nombre:"Firulais",
+     edad:5,
+     raza:"pastor aleman",
+     vacunado:true,
+     mostrarEdad(){
+          console.log(`La edad de ${this.nombre} es ${this.edad}`)
+     }
+}
+mostrarMascota(nuevaMascota,2)
